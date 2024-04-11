@@ -1,13 +1,12 @@
 #lab 9 - Realin is Decode
 
-def decode():
-    password_dec = int(input("Insert the password to decode: "))
-    password_dec = list(password_dec)
-    for each_char in range(password_dec):
+def decode(password):
+    # password = int(password)
+    for each_char in (password):
         new = []
-        each_char += 3
+        each_char = int(each_char)
+        each_char -= 3
         new.append(each_char)
-    new = str(new)
     return new
 
 
@@ -17,13 +16,14 @@ menu = print("""Menu
 2. Decode
 3. Quit""")
 
-choice = int(input("Please enter an option: "))
+choice = (input("Please enter an option: "))
 
 
-while choice == True:
-    if choice == 3:
-        break
-    elif choice == 2:
-        print(decode())
-    elif choice == 1:
+while choice == "1" or choice == "2" or choice == "3":
+    if choice == "2":
+        password_dec = (input("Insert the password to decode: "))
+        print(decode(password_dec))
+    elif choice == "1":
         pass
+    elif choice == "3":
+        break
