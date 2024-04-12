@@ -1,5 +1,16 @@
 #lab 9 - Realin is Decode
 
+# jen = encode
+def encode(password):
+    encoded = ""
+    for each_char in password:
+        each_char = int(each_char)
+        each_char += 3
+        encoded += str(each_char)
+
+    return encoded
+
+# realin = decode
 def decode(password):
     decoded = ""
     for each_char in password:
@@ -24,6 +35,7 @@ while choice == "1" or choice == "2" or choice == "3":
         print(decode(password_dec))
         choice = (input("Please enter an option: "))
     elif choice == "1":
-        pass
+        password_enc = (input("Insert the password to encode: "))
+        print(encode(password_enc))
     elif choice == "3":
         break
