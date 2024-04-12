@@ -31,11 +31,13 @@ choice = (input("Please enter an option: "))
 
 while choice == "1" or choice == "2" or choice == "3":
     if choice == "2":
-        password_dec = (input("Insert the password to decode: "))
-        print(decode(password_dec))
+        y = (decode(x))
+        print(f"The encoded password is {x}, and the original password is {y}")
         choice = (input("Please enter an option: "))
     elif choice == "1":
         password_enc = (input("Insert the password to encode: "))
-        print(encode(password_enc))
+        x = (encode(password_enc))
+        print("Your password has been encoded and stored!")
+        choice = (input("Please enter an option: "))
     elif choice == "3":
         break
